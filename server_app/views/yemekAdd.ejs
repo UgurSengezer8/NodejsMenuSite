@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+</head>
+<body>
+    <div class="container " >
+        <div class="card " style="width: 18rem;margin: 0 auto;">
+            <div class="card-header bg-success d-flex justify-content-center">
+              <h2 class="text-light">Giris Paneli</h2>
+            </div>
+            <form action="/yemek/add" method="post" enctype="multipart/form-data">
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div>Menu Adı</div>
+                    <div><input type="text" name="KullaniciAdi"></div>
+                </li>
+                <li class="list-group-item">
+                    <div>Menu Fiyat</div>
+                    <div><input type="text" name="Sifre"></div>
+                </li>
+                <li class="list-group-item">
+                  <div>Şifre</div>
+                  <div><input type="file" name="post_image"></div>
+                </li>
+                <li class="list-group-item" id="erey">
+                  <div>Şifre</div>
+                  <div><input type="hidden" name=yemeks value="elma"></div>
+                  <div><input type="hidden" name=yemeks value="armut"></div>
+                  <div><input type="hidden" name=yemeks value="kel"></div>
+                  <div><input type="hidden" name=yemeks value="mahmut"></div>
+
+                </li>
+
+                
+                <li class="list-group-item">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    <select class="form-select" id="inputGroupSelect01" name="idd">
+                      <option selected>Choose...</option>
+                      <%for (let index = 0; index < menus.length; index++) {%>
+                      <option value="<%=menus[index].id%>"><%=menus[index].title%></option>
+
+                    <%} %>
+                    </select>
+                  </div>
+                </li>
+                
+                <div class="list-group-item">
+                  <div class="input-group mb-3">
+                    <input type="text" id="yemektxt" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append" >
+                      <button class="btn btn-outline-secondary" type="button" onclick="yemekEkle(document.getElementById('yemektxt').value)">YemekEkle</button>
+                    </div>
+                  </div>
+                </div>
+                <li class="list-group-item">
+                    <input class="btn btn-success" type="submit" value="Gönder">
+                </li>
+                </ul>
+            </form>
+          </div>
+    </div>
+    <script src="../../public/scripts/mainScript.js"></script>
+    <script src="./public/scripts/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./public/scripts/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

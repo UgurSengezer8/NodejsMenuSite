@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../../public/css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+</head>
+<body>
+    
+    <div class="container d-flex justify-content-center">
+        <form action="/menu" method="post" enctype="multipart/form-data">
+            <div class="card" style="width: 25rem;">
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping">MenuName</span>
+                        <input type="text" name="title" class="form-control" placeholder="Giris" aria-label="Giris" aria-describedby="addon-wrapping">
+                      </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="input-group mb-3">
+                      <input type="file" name="post_image" class="form-control" id="inputGroupFile02">
+                      <label class="input-group-text" for="inputGroupFile02">MenuResim</label>
+                    </div>
+                </li>
+                </ul>
+                <div class="card-footer bg-dark">
+                    <input class="btn btn-light" type="submit" value="Menu Kaydet">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="./public/scripts/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./public/scripts/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
